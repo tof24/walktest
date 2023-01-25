@@ -173,6 +173,15 @@ body {
   font-size: 16px;
 }
 
+.midtext{
+  font-size: 3vw;
+}
+
+.align-items-center {
+  display: flex;
+  align-items: center;  /*Aligns vertically center */
+}
+
 @media screen and (max-width: 1500px) {
   .who {
     font-size: 3.4vw;
@@ -213,6 +222,10 @@ body {
   .we {
     right: -27vw;
   }
+
+  .midtext{
+    font-size: 3.5vw;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -240,6 +253,10 @@ body {
 
   .ui {
     font-size: 14px;
+  }
+
+  .midtext{
+    font-size: 4vw;
   }
 }
 
@@ -278,6 +295,14 @@ body {
     right: -30vw;
     font-size: 5vw;
   }
+
+  .midtext{
+    font-size: 4.5vw;
+  }
+
+  .midbot {
+    padding-top: 30vh;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -314,6 +339,10 @@ body {
 
   .ui {
     font-size: 13px;
+  }
+
+  .midtext{
+    font-size: 6.5vw;
   }
 
   @media screen and (min-width: 400px) {
@@ -391,10 +420,6 @@ body {
 @keyframes fade-inn2 {
   from {transform: scale(0.5)}
   to {transform: scale(1)}
-}
-
-.arewe{
-  padding-top: 20%;
 }
 
 .textin{
