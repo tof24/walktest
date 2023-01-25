@@ -7,9 +7,9 @@ function Album(props) {
         <div className={props.class}>
             <div className={"position-relative"}>
             <img className={"album"} src={props.cover}/>
-                <div className={"nunito text-white pt-2"}>
+                <div className={"nunito text-white pt-2 d-none d-md-block albumtext"}>
                     <p className={"p-0 m-0"}>{props.name}</p>
-                    <p className={"p-0 m-0"}>{props.artist}</p>
+                    <p className={"p-0 m-0 small"}>{props.artist}</p>
                 </div>
 
             </div>

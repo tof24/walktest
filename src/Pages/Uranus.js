@@ -22,7 +22,7 @@ function Uranus() {
                 <Painting name={"Nighthawks"} artist={"Edward Hopper"} class={"dark mb-5"} cover={"./Uranus/nightwalks.jpg"}></Painting>
                 <TextU class={"poemaU"}></TextU>
                 <div className={"text-right"}>
-                    <h1 className={"text-white we amiri"}> We may be alone in <br/> this darkness.</h1>
+                    <h1 className={"text-white who we amiri"}> We may be alone in <br/> this darkness.</h1>
                 </div>
 
                 <div className={"pt-5 text-center "}>

@@ -14,8 +14,7 @@ function Planet(props) {
                 camera-controls
                 touch-action="pan-y"
                 disable-zoom
-                style={{height: '400px', position:"absolute", left:"50%", right:"50%", transform: "translate(-50%,-50%)"}}
-
+                class={"planetpos"}
             >
             </model-viewer>
     );

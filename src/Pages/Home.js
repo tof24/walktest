@@ -152,7 +152,7 @@ function Home() {
     return (
 
         <div onWheel={handleScroll} className={"bgblack container-fluid"}>
-            <div className={"sticky-top"}>
+            <div className={"sticky-top ui"}>
                 <div className={"timer"}>
                     <span className={"text-white amiri"}><Timer></Timer></span>
                 </div>

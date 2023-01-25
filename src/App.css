@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 .App {
   text-align: center;
 }
@@ -121,22 +125,211 @@
 .who{
   position: absolute;
   transform: translate(-100%,-100%);
-  top: 45vh;
-  right: 12vw;
+  top: 48vh;
+  right: 6vw;
+  font-size: 2.7vw;
 }
+
 .we{
   position: absolute;
   transform: translate(-100%,-100%);
-  top: 45vh;
-  right: -3vw;
+  top: 65vh;
+  right: -6vw;
 }
 
 .album{
-  width: 150px;
+  width: 10vw;
 }
 
 .painting{
-  width: 300px;
+  width: 17vw;
+}
+
+.planetpos {
+  height: 400px;
+  position: absolute;
+  left:50%;
+  right: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.poema {
+  position: absolute;
+  bottom: 4vw;
+  right: 17vw;
+  animation: float2 20s ease-in-out infinite;
+  transform-style: preserve-3d; /* This property allows child elements to maintain their 3D position */
+}
+
+.scuola{
+  position: absolute;
+  bottom: 17vh;
+  left: 13vw;
+  animation: float2 20s ease-in-out infinite;
+  transform-style: preserve-3d; /* This property allows child elements to maintain their 3D position */
+}
+
+.ui {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1500px) {
+  .who {
+    font-size: 3.4vw;
+    right: -2vw;
+  }
+
+  .we {
+    right: -20vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .album {
+    width: 12vw;
+  }
+
+  .painting {
+    width: 20vw;
+  }
+
+  .albumtext {
+    font-size: 1.4vw;
+  }
+
+  .planetpos {
+    height: 290px;
+  }
+
+  .poema {
+    right: 10vw;
+  }
+
+  .who {
+    font-size: 3.8vw;
+    right: -9vw;
+  }
+
+  .we {
+    right: -27vw;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .album {
+    width: 14vw;
+  }
+
+  .albumtext {
+    font-size: 1.7vw;
+  }
+
+  .planetpos {
+    height: 270px;
+  }
+
+  .who {
+    font-size: 4vw;
+    right: -13vw;
+  }
+
+  .we {
+    right: -25vw;
+    font-size: 3.5vw;
+  }
+
+  .ui {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .album {
+    width: 18vw;
+  }
+
+  .painting {
+    width: 24vw;
+  }
+
+  .planetpos {
+    height: 250px;
+  }
+
+  .albumtext {
+    font-size: 2vw;
+  }
+
+  .who {
+    position: absolute;
+    transform: translate(-100%, -100%);
+    top: 71%;
+    right: -20vw;
+    font-size: 5.8vw;
+  }
+
+  .scuola {
+    bottom: 12vh;
+    animation: float1 20s ease-in-out infinite;
+  }
+
+  .we {
+    bottom: 25vh;
+    right: -30vw;
+    font-size: 5vw;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .album {
+    width: 22vw;
+  }
+
+  .painting {
+    width: 30vw;
+  }
+
+  .planetpos {
+    height: 230px;
+  }
+
+  .albumtext {
+    font-size: 2.7vw;
+  }
+
+  .poema {
+    bottom: 6vw;
+  }
+
+  .who {
+    font-size: 6.8vw;
+    right: -22vw;
+  }
+
+  .we {
+    bottom: 25vh;
+    right: -40vw;
+    font-size: 6.5vw;
+  }
+
+  .ui {
+    font-size: 13px;
+  }
+
+  @media screen and (min-width: 400px) {
+    .poema {
+      bottom: 1.5vh;
+      right: 8vw;
+    }
+
+    .scuola {
+      bottom: 11vh;
+    }
+
+    .albumtext {
+      font-size: 2.4vw;
+    }
+  }
 }
 
 .titulo{
@@ -154,9 +347,6 @@
 .nunito{
   font-family: 'Nunito', sans-serif;
 }
-
-
-
 
 .fade-out1{
   opacity: 0.8;
@@ -262,7 +452,7 @@
 .oddity{
   position: absolute;
   top: 12vh;
-  left: 50vw;
+  left: 60vw;
   animation: float2 20s ease-in-out infinite;
   transform-style: preserve-3d; /* This property allows child elements to maintain their 3D position */
 
@@ -284,22 +474,6 @@
   100% {
     transform: translateZ(0);
   }
-}
-
-.scuola{
-  position: absolute;
-  bottom: 20vh;
-  left: 13vw;
-  animation: float2 20s ease-in-out infinite;
-  transform-style: preserve-3d; /* This property allows child elements to maintain their 3D position */
-}
-
-.poema{
-  position: absolute;
-  bottom: 25vh;
-  right: 30vw;
-  animation: float2 20s ease-in-out infinite;
-  transform-style: preserve-3d; /* This property allows child elements to maintain their 3D position */
 }
 
 .poemaU{

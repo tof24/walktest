@@ -4,18 +4,12 @@ import React, { useState } from "react";
 
 function Text(props) {
     return (
-        <div className={props.class}>
-            <span className={"text-white titulo "}>
-                <div className={"nunito"}>
-                     <p >Não sou nada.</p>
-                    <p>Nunca serei nada.</p>
-                    <p>Não posso querer ser nada.</p>
-                    <p>À parte isso, tenho em mim todos os sonhos do mundo.</p>
-                    <p className={"text-white-50"}><small>Tabacaria, Álvaro de Campos</small></p>
-                </div>
-            </span>
-
-
+        <div className={"poema text-white nunito text-right albumtext"}>
+                    <p className={"mb-1"}>Não sou nada.</p>
+                    <p className={"mb-1"}>Nunca serei nada.</p>
+                    <p className={"mb-1"}>Não posso querer ser nada.</p>
+                    <p className={"mb-3"}>À parte isso, tenho em mim todos os sonhos do mundo.</p>
+                    <p className={"small"}>Tabacaria, Álvaro de Campos</p>
         </div>
     );
 }

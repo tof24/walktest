@@ -4,17 +4,11 @@ import React, { useState } from "react";
 
 function TextU(props) {
     return (
-        <div className={props.class}>
-            <span className={"text-white titulo text-right"}>
-                <div className={"nunito"}>
-                    <p >Não tenho ambições nem desejos</p>
-                    <p>Ser poeta não é uma ambição minha</p>
-                    <p>É a minha maneira de estar sozinho.</p>
-                    <p><small>Livro do Desassossego, Fernando Pessoa</small></p>
-                </div>
-            </span>
-
-
+        <div className={"poema text-white nunito text-right albumtext"}>
+                    <p className={"mb-1"}>Não tenho ambições nem desejos.</p>
+                    <p className={"mb-1"}>Ser poeta não é uma ambição minha.</p>
+                    <p className={"mb-3"}>É a minha maneira de estar sozinho.</p>
+                    <p className={"small"}>Livro do Desassossego, Fernando Pessoa</p>
         </div>
     );
 }

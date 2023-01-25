@@ -18,7 +18,7 @@ function Earth() {
                 <Link to="detail"><Album name={"Dark Side of The Moon"} artist={"Pink Floyd"} class={"dark"} cover={"./Earth/dark.jpg"}></Album></Link>
                 <Album name={"Space Oddity"} artist={"David Bowie"} class={"oddity"} cover={"./Earth/oddity.jpg"}></Album>
                 <Painting name={"Scuola di Atene"} artist={"Rafael Sanzio"} class={"scuola"} cover={"./Earth/Scuola.jpg"}></Painting>
-                <Text class={"poema"}></Text>
+                <Text className={"bra"} class={"poema"}></Text>
 
                 <div>
                     <h1 className={"text-white who amiri"}> Who are we?</h1>
