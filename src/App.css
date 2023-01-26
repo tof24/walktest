@@ -100,7 +100,7 @@ body {
   transform: rotate(-90deg);
   transform-origin: bottom center;
   top: 10vh;
-  right:  calc(1.5vw - 29px);
+  right: calc(1.2vh - 29px);
   z-index: 10;
 }
 
@@ -182,6 +182,32 @@ body {
   align-items: center;  /*Aligns vertically center */
 }
 
+.oddity{
+  position: absolute;
+  top: 12vh;
+  left: 60vw;
+  animation: float2 20s ease-in-out infinite;
+  transform-style: preserve-3d; /* This property allows child elements to maintain their 3D position */
+}
+
+.empire {
+  top: 45vh;
+  left: 70vw;
+}
+
+.purpose {
+  top: 85vh;
+  right: 5vw;
+}
+
+.each {
+  top: 91vh;
+}
+
+.midsub {
+  font-size: 0.9vw;
+}
+
 @media screen and (max-width: 1500px) {
   .who {
     font-size: 3.4vw;
@@ -190,6 +216,14 @@ body {
 
   .we {
     right: -20vw;
+  }
+
+  .purpose {
+    right: -3vw;
+  }
+
+  .midsub {
+    font-size: 1.1vw;
   }
 }
 
@@ -226,6 +260,14 @@ body {
   .midtext{
     font-size: 3.5vw;
   }
+
+  .purpose {
+    right: -15vw;
+  }
+
+  .midsub {
+    font-size: 1.3vw;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -258,6 +300,22 @@ body {
   .midtext{
     font-size: 4vw;
   }
+
+  .purpose {
+    right: -17vw;
+    top: 80vh;
+  }
+
+  .midsub {
+    font-size: 1.5vw;
+  }
+
+  @media screen and (min-width: 768px) {
+    .each {
+      top: 92vh;
+    }
+  }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -303,6 +361,20 @@ body {
   .midbot {
     padding-top: 30vh;
   }
+
+  .purpose {
+    right: -30vw;
+    top: 85vh;
+  }
+
+  .empire {
+    top: 70vh;
+    left: 60vw;
+  }
+
+  .midsub {
+    font-size: 2vw;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -345,6 +417,14 @@ body {
     font-size: 6.5vw;
   }
 
+  .crimson {
+    top: 67vh;
+  }
+
+  .midsub {
+    font-size: 3vw;
+  }
+
   @media screen and (min-width: 400px) {
     .poema {
       bottom: 1.5vh;
@@ -357,6 +437,10 @@ body {
 
     .albumtext {
       font-size: 2.4vw;
+    }
+
+    .midsub {
+      font-size: 2.7vw;
     }
   }
 }
@@ -471,16 +555,6 @@ body {
   100% {
     transform: translateZ(0);
   }
-}
-
-
-.oddity{
-  position: absolute;
-  top: 12vh;
-  left: 60vw;
-  animation: float2 20s ease-in-out infinite;
-  transform-style: preserve-3d; /* This property allows child elements to maintain their 3D position */
-
 }
 
 @keyframes float2 {

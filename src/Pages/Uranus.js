@@ -1,21 +1,15 @@
 import '../App.css'
 import '../bootstrap.min.css'
 import Planet from "../Components/Planet";
-import Timer from "../Components/Timer";
 import Album from "../Components/album";
 import Painting from "../Components/Painting";
 import TextU from "../Components/TextU";
 
 function Uranus() {
 
-
     return (
-
         <div className={"container-fluid"}>
-
-
             <div className={" container-fluid w-100"}>
-
 
                 <Album name={"A Song For Every Moon"} artist={"Bruno Major"} class={"oddity"} cover={"./Uranus/moon.jfif"}></Album>
                 <Album name={"Undercurrent"} artist={"Bill Evans"} class={"scuola "} cover={"./Uranus/undercurrent.jpg"}></Album>
