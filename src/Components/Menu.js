@@ -8,7 +8,7 @@ function MyCustomIcon({ isOpen, setIsOpen }) {
     return <img src={"./menu.png"} style={{transform: `rotate(${rotation}deg)`, transition: 'transform 0.2s ease-in-out'}} onClick={() => setIsOpen(!isOpen)} className={"img-btn"} />
 }
 
-export default props => {
+function Menu() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -19,12 +19,14 @@ export default props => {
             <a className="bm-item amiri midtext mx-1 mx-sm-2" href="/salads">
                 Planets
             </a>
-            <a className="bm-item amiri midtext mx-1 mx-sm-2" href="/pizzas">
+            <a className="bm-item amiri midtext mx-1 mx-sm-2" href="/about">
                 About
             </a>
         </HMenu>
     );
-};
+}
+
+export default Menu;
 
 
 
