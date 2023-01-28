@@ -133,7 +133,7 @@ body {
 .we{
   position: absolute;
   transform: translate(-100%,-100%);
-  top: 65vh;
+  top: 60vh;
   right: -6vw;
 }
 
@@ -157,13 +157,13 @@ body {
   position: absolute;
   bottom: 4vw;
   right: 17vw;
-  animation: float2 20s ease-in-out infinite;
+  animation: float1 20s ease-in-out infinite;
   transform-style: preserve-3d; /* This property allows child elements to maintain their 3D position */
 }
 
 .scuola{
   position: absolute;
-  bottom: 17vh;
+  bottom: 15vh;
   left: 13vw;
   animation: float2 20s ease-in-out infinite;
   transform-style: preserve-3d; /* This property allows child elements to maintain their 3D position */
@@ -175,6 +175,16 @@ body {
 
 .midtext{
   font-size: 3vw;
+}
+
+.title {
+  font-size: 4.5vw;
+  padding-left: 10vw;
+}
+
+.quote {
+  position: absolute;
+  right: 2vw;
 }
 
 .align-items-center {
@@ -190,22 +200,70 @@ body {
   transform-style: preserve-3d; /* This property allows child elements to maintain their 3D position */
 }
 
-.empire {
-  top: 45vh;
-  left: 70vw;
-}
-
 .purpose {
   top: 85vh;
-  right: 5vw;
-}
-
-.each {
-  top: 91vh;
+  right: 30vw;
 }
 
 .midsub {
   font-size: 0.9vw;
+}
+
+.saturn {
+  width: 400px;
+}
+
+.evans {
+  right: 30vw;
+}
+
+.empire {
+  right: 20vw;
+  top: 70vh;
+  animation: float2 20s ease-in-out infinite;
+}
+
+.crimson {
+  top: 40vh;
+  left: 73vw;
+  animation: float1 20s ease-in-out infinite;
+}
+
+.dark{
+  position: absolute;
+  top: 15vh;
+  left: 17vw;
+  animation: float1 20s ease-in-out infinite;
+  transform-style: preserve-3d; /* This property allows child elements to maintain their 3D position */
+
+}
+
+.whats {
+  left: 28vw;
+}
+
+.inedito {
+  top: 40vh;
+  left: 12vw;
+  animation: float2 20s ease-in-out infinite;
+}
+
+.canto {
+  top: 70vh;
+  animation: float1 20s ease-in-out infinite;
+}
+
+.proud {
+  right: 60vw;
+  top: 35vh;
+}
+
+.train {
+  left: 50vw;
+}
+
+.return {
+  right: 15vw;
 }
 
 @media screen and (max-width: 1500px) {
@@ -218,12 +276,33 @@ body {
     right: -20vw;
   }
 
-  .purpose {
-    right: -3vw;
-  }
-
   .midsub {
     font-size: 1.1vw;
+  }
+
+  .poema {
+    right: 10vw;
+  }
+
+  .evans {
+    right: 30vw;
+  }
+
+  .purpose {
+    right: 25vw;
+  }
+
+  .empire {
+    right: 20vw;
+    top: 70vh;
+  }
+
+  .proud {
+    right: 55vw;
+  }
+
+  .return {
+    right: 15vw;
   }
 }
 
@@ -244,8 +323,8 @@ body {
     height: 275px;
   }
 
-  .poema {
-    right: 10vw;
+  .saturn {
+    height: 350px;
   }
 
   .who {
@@ -254,19 +333,44 @@ body {
   }
 
   .we {
-    right: -27vw;
+    right: -26vw;
   }
 
   .midtext{
     font-size: 3.5vw;
   }
 
-  .purpose {
-    right: -15vw;
-  }
-
   .midsub {
     font-size: 1.3vw;
+  }
+
+  .evans {
+    right: 30vw;
+  }
+
+  .purpose {
+    right: 20vw;
+  }
+
+  .empire {
+    right: 20vw;
+    top: 70vh;
+  }
+
+  .proud {
+    right: 50vw;
+  }
+
+  .how {
+    right: -22vw;
+  }
+
+  .return {
+    right: 12vw;
+  }
+
+  .title {
+    font-size: 5.5vw;
   }
 }
 
@@ -283,13 +387,17 @@ body {
     height: 260px;
   }
 
+  .saturn {
+    height: 320px;
+  }
+
   .who {
     font-size: 4vw;
     right: -13vw;
   }
 
   .we {
-    right: -25vw;
+    right: -23vw;
     font-size: 3.5vw;
   }
 
@@ -301,21 +409,52 @@ body {
     font-size: 4vw;
   }
 
-  .purpose {
-    right: -17vw;
-    top: 80vh;
-  }
-
   .midsub {
     font-size: 1.5vw;
   }
 
-  @media screen and (min-width: 768px) {
-    .each {
-      top: 92vh;
-    }
+  .purpose {
+    right: 25vw;
   }
 
+  .crimson {
+    left: 70vw;
+  }
+
+  .proud {
+    right: 50vw;
+  }
+
+  .kiss {
+    left: 73vw;
+  }
+
+  .ok {
+    left: 70vw;
+  }
+
+  .how {
+    right: -21vw;
+  }
+
+  .title {
+    font-size: 6.5vw;
+    padding-left: 7vw;
+  }
+
+  .quote {
+    right: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    .poema {
+      top: 76vh;
+    }
+
+    .evans {
+      top: 72vh;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -331,6 +470,10 @@ body {
     height: 240px;
   }
 
+  .saturn {
+    height: 290px;
+  }
+
   .albumtext {
     font-size: 2vw;
   }
@@ -343,13 +486,8 @@ body {
     font-size: 5.8vw;
   }
 
-  .scuola {
-    bottom: 12vh;
-    animation: float1 20s ease-in-out infinite;
-  }
-
   .we {
-    bottom: 25vh;
+    bottom: 23vh;
     right: -30vw;
     font-size: 5vw;
   }
@@ -362,18 +500,57 @@ body {
     padding-top: 30vh;
   }
 
-  .purpose {
-    right: -30vw;
-    top: 85vh;
-  }
-
-  .empire {
-    top: 70vh;
-    left: 60vw;
-  }
-
   .midsub {
     font-size: 2vw;
+  }
+
+  .evans {
+    top: 80vh;
+  }
+
+  .livro1 {
+    left: 53vw;
+  }
+
+  .purpose {
+    right: 4vw;
+  }
+
+  .crimson {
+    top: 60vh;
+  }
+
+  .whats {
+    left: 20vw;
+  }
+
+  .inedito {
+    top: 82vh;
+    left: 25vw;
+  }
+
+  .ok {
+    top: 80vh;
+    left: 70vw;
+  }
+
+  .proud {
+    right: -23vw;
+  }
+
+  .kiss {
+    top: 15vh;
+    left: 20vw;
+  }
+
+  .title {
+    font-size: 7.5vw;
+    padding-left: 5vw;
+  }
+
+  .quote {
+    right: -2vw;
+    bottom: 15vh;
   }
 }
 
@@ -390,6 +567,10 @@ body {
     height: 210px;
   }
 
+  .saturn {
+    height: 250px;
+  }
+
   .albumtext {
     font-size: 2.7vw;
   }
@@ -404,7 +585,7 @@ body {
   }
 
   .we {
-    bottom: 25vh;
+    bottom: 21vh;
     right: -40vw;
     font-size: 6.5vw;
   }
@@ -417,22 +598,63 @@ body {
     font-size: 6.5vw;
   }
 
-  .crimson {
-    top: 67vh;
-  }
-
   .midsub {
     font-size: 3vw;
   }
 
+  .scuola {
+    bottom: 14vh;
+  }
+
+  .evans {
+    right: 20vw;
+  }
+
+  .livro1 {
+    top: 25vh;
+    left: 45vw;
+  }
+
+  .purpose {
+    top: 73vh;
+    right: -20vw;
+  }
+
+  .crimson {
+    top: 65vh;
+  }
+
+  .proud {
+    top: 72vh;
+    right: -28vw;
+  }
+
+  .kiss {
+    top: 15vh;
+    left: 17vw;
+  }
+
+  .livro2 {
+    top: 30vh;
+    left: 40vw;
+  }
+
+  .cesario {
+    top: 28vh;
+  }
+
+  .title {
+    font-size: 9vw;
+    padding-left: 3vw;
+  }
+
+  .quote {
+    right: -6vw;
+  }
+
   @media screen and (min-width: 400px) {
     .poema {
-      bottom: 1.5vh;
-      right: 8vw;
-    }
-
-    .scuola {
-      bottom: 11vh;
+      bottom: 2vh;
     }
 
     .albumtext {
@@ -441,6 +663,24 @@ body {
 
     .midsub {
       font-size: 2.7vw;
+    }
+
+    .livro1 {
+      top: 25vh;
+      left: 53vw;
+    }
+
+    .livro2 {
+      top: 30vh;
+      left: 46vw;
+    }
+
+    .empire {
+      top: 83vh;
+    }
+
+    .cesario {
+      top: 25vh;
     }
   }
 }
@@ -530,15 +770,6 @@ body {
   to {transform: scale(0)}
 }
 
-.dark{
-  position: absolute;
-  top: 15vh;
-  left: 17vw;
-  animation: float1 20s ease-in-out infinite;
-  transform-style: preserve-3d; /* This property allows child elements to maintain their 3D position */
-
-}
-
 @keyframes float1 {
   0% {
     transform: translateZ(0);
@@ -573,14 +804,6 @@ body {
   100% {
     transform: translateZ(0);
   }
-}
-
-.poemaU{
-  position: absolute;
-  bottom: 25vh;
-  right: 35vw;
-  animation: float2 20s ease-in-out infinite;
-  transform-style: preserve-3d; /* This property allows child elements to maintain their 3D position */
 }
 
 aside {

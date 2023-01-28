@@ -3,6 +3,11 @@ import '../bootstrap.min.css'
 import React, { useState } from "react";
 
 function Planet(props) {
+
+    //altera apenas tamanho de saturno
+    let custom;
+    props.image === "./Saturn.glb" ? custom = "planetpos saturn" : custom = "planetpos";
+
     return (
 
             <model-viewer
@@ -14,7 +19,7 @@ function Planet(props) {
                 camera-controls
                 touch-action="pan-y"
                 disable-zoom
-                class={"planetpos"}
+                class={custom}
             >
             </model-viewer>
     );

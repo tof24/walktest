@@ -3,15 +3,33 @@ import '../bootstrap.min.css'
 import React, { useState } from "react";
 
 function Text(props) {
+
+    let textArray = props.text.split("||");
+    let poema=[];
+    let j=0;
+
+    //console.log(textArray,"braa");
+
+    for (let i=0; i<textArray.length; i++){
+        if(i !== textArray.length-1) {
+            poema[i] = <p className={"mb-0"} key={"id" + j++}> {textArray[i]}</p>
+
+        } else {
+            poema[i] = <p className={"mb-3"} key={"id" + j++}> {textArray[i]}</p>;
+
+        }
+    }
+
+    console.log(j);
+
+    //console.log(poema,"wwww")
+
     return (
-        <div className={"poema text-white nunito text-right albumtext"}>
-                    <p className={"mb-1"}>Não sou nada.</p>
-                    <p className={"mb-1"}>Nunca serei nada.</p>
-                    <p className={"mb-1"}>Não posso querer ser nada.</p>
-                    <p className={"mb-3"}>À parte isso, tenho em mim todos os sonhos do mundo.</p>
-                    <p className={"small"}>Tabacaria, Álvaro de Campos</p>
+        <div className={"text-white nunito"}>
+            {poema}
+            <p className={"small"}>{props.source}</p>
         </div>
     );
 }
 
-export default Text
+export default Text;

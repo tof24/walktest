@@ -3,7 +3,6 @@ import '../bootstrap.min.css'
 import Planet from "../Components/Planet";
 import Album from "../Components/album";
 import Painting from "../Components/Painting";
-import TextU from "../Components/TextU";
 
 function Mercury() {
 
@@ -12,9 +11,9 @@ function Mercury() {
             <div className={" container-fluid w-100"}>
 
                 <Album name={"In the Wee Small Hours"} artist={"Frank Sinatra"} class={"oddity"} cover={"./Mercury/frank.jpg"}></Album>
-                <Album name={"In the Court of the Crimson King"} artist={"King Crimson"} class={"scuola crimson"} cover={"./Mercury/crimson.jpeg"}></Album>
+                <Album name={"In the Court of the Crimson King"} artist={"King Crimson"} class={"oddity crimson"} cover={"./Mercury/crimson.jpeg"}></Album>
                 <Painting name={"The Starry Night"} artist={"Vincent van Gogh"} class={"dark mb-5"} cover={"./Mercury/starry.jpg"}></Painting>
-                <Painting name={"The Course of Empire: Destruction"} artist={"Thomas Cole"} class={"oddity empire"} cover={"./Mercury/empire.jpg"}></Painting>
+                <Painting name={"The Course of Empire: Destruction"} artist={"Thomas Cole"} class={"poema evans empire"} cover={"./Mercury/empire.jpg"}></Painting>
                 <div className={"text-right"}>
                     <h1 className={"text-white who we purpose amiri"}> Do we have purpose?</h1>
                 </div>

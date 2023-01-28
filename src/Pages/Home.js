@@ -10,20 +10,22 @@ import Venus from "./Venus";
 import Mars from "./Mars";
 import Saturn from "./Saturn";
 import Neptune from "./Neptune";
+import Landing from "./Landing";
 import {useState, useEffect} from "react";
 import { Link } from 'react-router-dom';
-import TextU from "../Components/TextU";
 
 function Home() {
 
-    const [current, setCurrent] = useState(<Earth/>);
-    const [estilo, setEstilo] = useState("")
-    const [page, setPage] = useState("1")
-    const [days, setDays] = useState("365")
-    const [planet, setPlanet] = useState("Earth")
+    const [current, setCurrent] = useState(<Landing/>);
+    const [estilo, setEstilo] = useState("");
+    const [page, setPage] = useState("");
+    const [days, setDays] = useState("");
+    const [planet, setPlanet] = useState("");
+    const [hub, setHub] = useState("d-none");
+    const [refresh, setRefresh] = useState(0);
 
 
-    const [currentScreen, setCurrentScreen] = useState(1);
+    const [currentScreen, setCurrentScreen] = useState(-75);
     const [wheel, setWheel] = useState(0);
 
 
@@ -44,21 +46,85 @@ function Home() {
         console.log("inside useeefect", currentScreen)
         console.log("inside 2", wheel)
 
+        //landing page
+        if (currentScreen === -70 && wheel === 1) {
+            setEstilo("textin centra")
+            setCurrent(<Landing/>)
+            setHub("d-none")
+
+        }
+        if (currentScreen === -65 && wheel === 0) {
+            setEstilo("textout centra")
+        }
+        //fim landing page
+
+        //narrativa 0
+        if (currentScreen === -55 && wheel === 1) {
+            setEstilo("textout centra")
+        }
+
+        if (currentScreen === -50 && wheel === 0) {
+            setCurrent(<Text2 classi={"d-none"} frase1={"In this vast universe what are we here for?"}> </Text2>)
+            setEstilo("textin centra")
+            setPage("?")
+            setDays("?")
+            setPlanet("?")
+            setHub("d-block")
+            setRefresh(5)
+        }
+        if (currentScreen === -40 && wheel === 1) {
+            setCurrent(<Text2 classi={"d-none"} frase1={"In this vast universe what are we here for?"}> </Text2>)
+            setEstilo("textin centra")
+            setPage("?")
+            setDays("?")
+            setPlanet("?")
+        }
+
+        if (currentScreen === -35 && wheel === 0) {
+            setEstilo("textout centra")
+        }
+        //fim narrativa 0
+
         //animação Terra
-        if (currentScreen === 5 && wheel === 1) {
-            //scroll up
-            setEstilo("fade-in2 centra")
+        if (currentScreen === -25 && wheel === 1) {
+            setEstilo("fade-out2 centra")
         }
-        if (currentScreen === 10 && wheel === 0) {
-            setEstilo("fade-out1 centra")
-        }
-        if (currentScreen === 20 && wheel === 1) {
-            setEstilo("fade-in1 centra")
+
+        if (currentScreen === -20 && wheel === 0) {
             setCurrent(<Earth/>)
             setPage("1")
             setDays("365")
             setPlanet("Earth")
+            setEstilo("fade-in1 centra")
         }
+
+        if (currentScreen === -10 && wheel === 1) {
+            setEstilo("fade-out1 centra")
+
+        }
+
+        if (currentScreen === -5 && wheel === 0) {
+
+            setEstilo("fade-in2 centra")
+        }
+        if (currentScreen === 5 && wheel === 1) {
+            setEstilo("fade-in2 centra")
+
+        }
+
+        if (currentScreen === 10 && wheel === 0) {
+            setEstilo("fade-out1 centra")
+        }
+
+        if (currentScreen === 20 && wheel === 1) {
+            setCurrent(<Earth/>)
+            setPage("1")
+            setDays("365")
+            setPlanet("Earth")
+            setEstilo("fade-in1 centra")
+
+        }
+
         if (currentScreen === 25 && wheel === 0) {
             setEstilo("fade-out2 centra")
         }
@@ -419,14 +485,14 @@ function Home() {
         }
 
         if (currentScreen === 490 && wheel === 0) {
-            setCurrent(<Text2 classi={"d-none"} frase1={"Are you feeling infinite?"}> </Text2>)
+            setCurrent(<Text2 classi={"d-none"} frase1={"You are feeling infinite."}> </Text2>)
             setEstilo("textin centra")
             setPage("?")
             setDays("?")
             setPlanet("?")
         }
         if (currentScreen === 500 && wheel === 1) {
-            setCurrent(<Text2 classi={"d-none"} frase1={"Are you feeling infinite?"}> </Text2>)
+            setCurrent(<Text2 classi={"d-none"} frase1={"You are feeling infinite."}> </Text2>)
             setEstilo("textin centra")
             setPage("?")
             setDays("?")
@@ -582,9 +648,9 @@ function Home() {
     return (
 
         <div onWheel={handleScroll} className={"bgblack container-fluid"}>
-            <div className={"sticky-top ui"}>
+            <div className={"sticky-top ui " + hub}>
                 <div className={"timer"}>
-                    <span className={"text-white amiri"}><Timer></Timer></span>
+                    <span className={"text-white amiri"}><Timer refresh={refresh}></Timer></span>
                 </div>
                 <div className={"counter"}>
                     <div className={"frac text-white amiri"}>
