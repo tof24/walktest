@@ -1,6 +1,7 @@
 import '../App.css'
 import '../bootstrap.min.css'
-import React, { useState } from "react";
+import React from "react";
+
 
 function Planet(props) {
 
@@ -9,7 +10,6 @@ function Planet(props) {
     props.image === "./Saturn.glb" ? custom = "planetpos saturn" : custom = "planetpos";
 
     return (
-
             <model-viewer
                 src={props.image}
                 alt="A rock"
@@ -20,10 +20,9 @@ function Planet(props) {
                 touch-action="pan-y"
                 disable-zoom
                 class={custom}
-            >
-            </model-viewer>
+            ></model-viewer>
     );
 }
 
-export default Planet
+export default Planet;
 

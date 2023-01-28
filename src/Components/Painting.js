@@ -1,8 +1,10 @@
 import '../App.css'
 import '../bootstrap.min.css'
-import React, { useState } from "react";
+import React from "react";
+
 
 function Painting(props) {
+
     return (
         <div className={props.class}>
             <div className={"position-relative"}>
@@ -11,10 +13,7 @@ function Painting(props) {
                     <p className={"p-0 m-0"}>{props.name}</p>
                     <p className={"p-0 m-0 small"}>{props.artist}</p>
                 </div>
-
             </div>
-
-
         </div>
     );
 }

@@ -1,6 +1,7 @@
 import '../App.css'
 import '../bootstrap.min.css'
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
+
 
 const Timer = (props) => {
     const [seconds, setSeconds] = useState(0);
@@ -12,7 +13,6 @@ const Timer = (props) => {
             setMinutes(0);
             setHours(0);
     }, [props.refresh]);
-
 
     useEffect(() => {
         const interval = setInterval(() => {

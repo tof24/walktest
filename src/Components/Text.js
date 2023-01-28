@@ -1,6 +1,7 @@
 import '../App.css'
 import '../bootstrap.min.css'
-import React, { useState } from "react";
+import React from "react";
+
 
 function Text(props) {
 
@@ -9,20 +10,13 @@ function Text(props) {
     let j=0;
 
     //console.log(textArray,"braa");
-
     for (let i=0; i<textArray.length; i++){
         if(i !== textArray.length-1) {
             poema[i] = <p className={"mb-0"} key={"id" + j++}> {textArray[i]}</p>
-
         } else {
             poema[i] = <p className={"mb-3"} key={"id" + j++}> {textArray[i]}</p>;
-
         }
     }
-
-    console.log(j);
-
-    //console.log(poema,"wwww")
 
     return (
         <div className={"text-white nunito"}>

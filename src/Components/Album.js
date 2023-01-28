@@ -1,6 +1,6 @@
 import '../App.css'
 import '../bootstrap.min.css'
-import React, { useState } from "react";
+import React from "react";
 
 function Album(props) {
     return (
@@ -11,12 +11,9 @@ function Album(props) {
                     <p className={"p-0 m-0"}>{props.name}</p>
                     <p className={"p-0 m-0 small"}>{props.artist}</p>
                 </div>
-
             </div>
-
-
         </div>
     );
 }
 
-export default Album
+export default Album;

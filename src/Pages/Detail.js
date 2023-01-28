@@ -2,7 +2,7 @@ import '../App.css'
 import '../bootstrap.min.css'
 import Planet from "../Components/Planet";
 import Timer from "../Components/Timer";
-import Album from "../Components/album";
+import Album from "../Components/Album";
 import {useState, useEffect} from "react";
 
 function Detail() {

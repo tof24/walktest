@@ -1,16 +1,10 @@
 import '../App.css'
 import '../bootstrap.min.css'
-import Planet from "../Components/Planet";
-import Album from "../Components/album";
-import Painting from "../Components/Painting";
-import Text from "../Components/Text";
-import { Link } from 'react-router-dom';
 
 
 function Landing() {
 
     return (
-
         <div className={"container-fluid centra"}>
             <div className={"container-fluid h-100 align-items-center"}>
                 <div>
