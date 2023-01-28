@@ -12,6 +12,7 @@ import Saturn from "./Saturn";
 import Neptune from "./Neptune";
 import Landing from "./Landing";
 import {useState, useEffect} from "react";
+import Menu from "../Components/Menu";
 
 
 function Home() {
@@ -47,7 +48,6 @@ function Home() {
             setEstilo("textin centra")
             setCurrent(<Landing/>)
             setHub("d-none")
-
         }
         if (currentScreen === -65 && wheel === 0) {
             setEstilo("textout centra")
@@ -62,7 +62,7 @@ function Home() {
             setEstilo("textin centra")
             setPage("?")
             setDays("?")
-            setPlanet("?")
+            setPlanet("")
             setHub("d-block")
             setRefresh(5)
         }
@@ -71,7 +71,7 @@ function Home() {
             setEstilo("textin centra")
             setPage("?")
             setDays("?")
-            setPlanet("?")
+            setPlanet("")
         }
         if (currentScreen === -35 && wheel === 0) {
             setEstilo("textout centra")
@@ -120,14 +120,14 @@ function Home() {
             setEstilo("textin centra")
             setPage("?")
             setDays("?")
-            setPlanet("?")
+            setPlanet("")
         }
         if (currentScreen === 50 && wheel === 1) {
             setCurrent(<Text2 frase1={"Are we meaningful?"} frase2={"Or just small dots in an infinite universe?"}> </Text2>)
             setEstilo("textin centra")
             setPage("?")
             setDays("?")
-            setPlanet("?")
+            setPlanet("")
         }
         if (currentScreen === 55 && wheel === 0) {
             setEstilo("textout centra")
@@ -177,14 +177,14 @@ function Home() {
             setEstilo("textin centra")
             setPage("?")
             setDays("?")
-            setPlanet("?")
+            setPlanet("")
         }
         if (currentScreen === 140 && wheel === 1) {
             setCurrent(<Text2 classi={"d-none"} frase1={"But can we be more than nothing?"}> </Text2>)
             setEstilo("textin centra")
             setPage("?")
             setDays("?")
-            setPlanet("?")
+            setPlanet("")
         }
         if (currentScreen === 145 && wheel === 0) {
             setEstilo("textout centra")
@@ -233,14 +233,14 @@ function Home() {
             setEstilo("textin centra")
             setPage("?")
             setDays("?")
-            setPlanet("?")
+            setPlanet("")
         }
         if (currentScreen === 230 && wheel === 1) {
             setCurrent(<Text2 classi={"d-none"} frase1={"After all, we are unique."}> </Text2>)
             setEstilo("textin centra")
             setPage("?")
             setDays("?")
-            setPlanet("?")
+            setPlanet("")
         }
         if (currentScreen === 235 && wheel === 0) {
             setEstilo("textout centra")
@@ -289,14 +289,14 @@ function Home() {
             setEstilo("textin centra")
             setPage("?")
             setDays("?")
-            setPlanet("?")
+            setPlanet("")
         }
         if (currentScreen === 320 && wheel === 1) {
             setCurrent(<Text2 frase1={"Can you see?"} frase2={"We are kind of beautiful."}> </Text2>)
             setEstilo("textin centra")
             setPage("?")
             setDays("?")
-            setPlanet("?")
+            setPlanet("")
         }
         if (currentScreen === 325 && wheel === 0) {
             setEstilo("textout centra")
@@ -345,14 +345,14 @@ function Home() {
             setEstilo("textin centra")
             setPage("?")
             setDays("?")
-            setPlanet("?")
+            setPlanet("")
         }
         if (currentScreen === 410 && wheel === 1) {
             setCurrent(<Text2 classi={"d-none"} frase1={"So much we can achieve."}> </Text2>)
             setEstilo("textin centra")
             setPage("?")
             setDays("?")
-            setPlanet("?")
+            setPlanet("")
         }
         if (currentScreen === 415 && wheel === 0) {
             setEstilo("textout centra")
@@ -408,7 +408,7 @@ function Home() {
             setEstilo("textin centra")
             setPage("?")
             setDays("?")
-            setPlanet("?")
+            setPlanet("")
         }
         if (currentScreen === 505 && wheel === 0) {
             setEstilo("textout centra")
@@ -457,14 +457,14 @@ function Home() {
             setEstilo("textin centra")
             setPage("?")
             setDays("?")
-            setPlanet("?")
+            setPlanet("")
         }
         if (currentScreen === 590 && wheel === 1) {
             setCurrent(<Text2 classi={"d-none"} frase1={"Life is ephemeral."}> </Text2>)
             setEstilo("textin centra")
             setPage("?")
             setDays("?")
-            setPlanet("?")
+            setPlanet("")
         }
         if (currentScreen === 595 && wheel === 0) {
             setEstilo("textout centra")
@@ -529,7 +529,7 @@ function Home() {
     }, [currentScreen]);
 
     return (
-        <div onWheel={handleScroll} className={"bgblack container-fluid"}>
+        <div onWheel={handleScroll} className={"bgblack container-fluid overflow-hidden"}>
             <div className={"sticky-top ui " + hub}>
                 <div className={"timer"}>
                     <span className={"text-white amiri"}><Timer refresh={refresh}></Timer></span>

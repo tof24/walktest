@@ -269,6 +269,10 @@ body {
   right: 15vw;
 }
 
+.img-btn {
+  width: 38px;
+}
+
 @media screen and (max-width: 1500px) {
   .who {
     font-size: 3.4vw;
@@ -374,6 +378,10 @@ body {
 
   .title {
     font-size: 5.5vw;
+  }
+
+  .img-btn {
+    width: 34px;
   }
 }
 
@@ -555,6 +563,10 @@ body {
     right: -2vw;
     bottom: 15vh;
   }
+
+  .img-btn {
+    width: 30px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -655,6 +667,10 @@ body {
     right: -6vw;
   }
 
+  .img-btn {
+    width: 26px;
+  }
+
   @media screen and (min-width: 400px) {
     .poema {
       bottom: 2vh;
@@ -684,6 +700,10 @@ body {
 
     .cesario {
       top: 25vh;
+    }
+
+    .img-btn {
+      width: 30px;
     }
   }
 }
@@ -831,6 +851,72 @@ aside {
     transform: translateZ(0);
   }
 }
+
+/*menu hamburguer*/
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 50px;
+  margin-left: 1vw;
+}
+
+button#react-burger-menu-btn:focus {
+  outline: none;
+}
+
+/*Sidebar wrapper styles*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  margin-left: 1vw;
+  z-index: 2!important;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: transparent;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-align: left;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.bm-item:hover {
+  color: #bebebe;
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  position: absolute;
+  left: 0;
+  background: rgba(0, 0, 0, 0.85)!important;
+  pointer-events: none;
+  z-index: 1!important;
+}
+
+
+
 
 
 
