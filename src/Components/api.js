@@ -1,0 +1,1 @@
+export const API_URL = 'https://spacewalk-c5ac73.ingress-daribow.ewp.live/wp-json/wp/v2/';

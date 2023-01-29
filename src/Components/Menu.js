@@ -16,7 +16,7 @@ function Menu() {
             <a className="bm-item amiri midtext mt-3 mt-md-4 pt-4 mx-1 mx-sm-2" href="/">
                 Home
             </a>
-            <a className="bm-item amiri midtext mx-1 mx-sm-2" href="/salads">
+            <a className="bm-item amiri midtext mx-1 mx-sm-2" href="/searchplanet">
                 Planets
             </a>
             <a className="bm-item amiri midtext mx-1 mx-sm-2" href="/about">

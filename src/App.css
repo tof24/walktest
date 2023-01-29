@@ -940,6 +940,87 @@ button#react-burger-menu-btn:focus {
   z-index: 1!important;
 }
 
+/*************************/
+
+.titlefont{
+  font-size: 2.7vw;
+}
+
+.bgblacksearch{
+  background: #0C0B0C;
+}
+
+.searchpadding{
+  padding-top: 17vw;
+  padding-left: 7vw;
+}
+
+.bggrainsearch{
+  background-image: url("../public/13.png");
+}
+
+.custom-dropdown {
+  background-color: transparent;
+  border: none;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom:10px;
+  padding-top: 10px;
+
+}
+
+.custom-dropdown::before, .custom-dropdown::after {
+  background-color: transparent;
+  border: none;
+}
+
+.custom-dropdown option {
+  background-color: rgb(14, 13, 13);
+  box-shadow: none!important;
+}
+
+.custom-dropdown:focus {
+  outline: 0;
+}
+
+.planetasearch{
+  height: 19vw;
+  width: auto;
+}
+
+.masterpading{
+  padding-top: 20vh;
+}
+
+.masterart{
+  max-height: 180px;
+  width: auto;
+}
+
+.sticky-planet{
+  position: fixed;
+  bottom: 5vh;
+  margin-left: 30px;
+  width: 18vw  ;
+
+}
+
+.assideimg{
+  max-width: 250px;
+  object-fit: cover;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.smallplanet{
+  height: 33vh;
+}
+
+.displaypaint{
+  width: 40vw;
+}
+
 
 
 
