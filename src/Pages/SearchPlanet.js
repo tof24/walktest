@@ -206,7 +206,7 @@ console.log(one, two, three,refresh, "olha os numberos")
                                         <div className={"w-100 text-center "}>
                                             <PlanetSearch class={"miniplanet"} image={four.imagem}></PlanetSearch>
                                         </div>
-                                        <Link className={"link"} to={"/master"} state={one} >
+                                        <Link className={"link"} to={"/master"} state={four} >
                                             <h5 className={"amiri pb-0 mb-0 pt-3"}>{four.name}
                                                 <br/><small className={"nunito pt-0 mt-0 text-white-50"}>{four.theme}</small></h5>
                                         </Link>
