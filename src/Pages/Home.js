@@ -529,7 +529,7 @@ function Home() {
     }, [currentScreen]);
 
     return (
-        <div onWheel={handleScroll} className={"bgblack container-fluid overflow-hidden"}>
+        <div onWheel={handleScroll} className={"bgblack container-fluid position-relative overflow-hidden"}>
             <div className={"sticky-top ui " + hub}>
                 <div className={"timer"}>
                     <span className={"text-white amiri"}><Timer refresh={refresh}></Timer></span>

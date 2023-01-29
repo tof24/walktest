@@ -132,7 +132,7 @@ function Detail() {
 
             <div className={" bggrainsearch text-white"}>
                 <div className={"container-fluid "}>
-                    <div className={"px-0 d-block d-md-none "}>
+                    <div className={"px-0 d-block d-md-none pt-5"}>
                         <div className={"h-100 text-center pt-5"}>
                             <img className={"assideimg px-4"} src={info.img_cover.url}/>
 
