@@ -102,7 +102,7 @@ function Detail() {
 
     function ArrayToParagraphs(arr) {
         return arr.map(value => {
-            return <p>{value}</p>;
+            return <p className={"mb-1"}>{value}</p>;
         });
     }
 
