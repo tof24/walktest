@@ -948,6 +948,7 @@ button#react-burger-menu-btn:focus {
 
 .bgblacksearch{
   background: #0C0B0C;
+  min-height: 100vh;
 }
 
 .searchpadding{
@@ -957,6 +958,7 @@ button#react-burger-menu-btn:focus {
 
 .bggrainsearch{
   background-image: url("../public/13.png");
+  min-height: 100vh;
 }
 
 .custom-dropdown {
