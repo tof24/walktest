@@ -144,8 +144,19 @@ console.log(one, two, three,refresh, "olha os numberos")
             <div className={"bggrainsearch pt-5 text-white"}>
                 <div className={"titlefont amiri searchpadding"}>Are you looking for something?</div>
                 <div className={"container-fluid"}>
+                    <div className={"d-lg-none"}>
+                        <div className={"row pt-5"}>
+                            <div className={"col-6"}>
+                                <span className={"amiri text-white-50"}>Order by:</span><Dropdown onSelect={sortit}></Dropdown>
+                            </div>
+
+                            <div className={"col-6"}>
+                                <span className={"amiri text-white-50"}>Category:</span><Dropdown2 onSelect={sortit2}></Dropdown2>
+                            </div>
+                        </div>
+                    </div>
                     <div className={"row"}>
-                        <aside className={"col-3"}>
+                        <aside className={"d-none d-lg-block"}>
                             <div className={"h-100 linha"}>
                                 <div>
                                  <span className={"amiri text-white-50"}>Order by:</span><Dropdown onSelect={sortit}></Dropdown>
@@ -158,81 +169,81 @@ console.log(one, two, three,refresh, "olha os numberos")
                         </aside>
                         <div className={"detaildiv col nunito"}>
                             <div className={"container-fluid"}>
-                                <div className={"row pt-5"}>
+                                <div className={"row "}>
 
-                                    <div className={"col-6 pr-3 pb-3 " + one.clas}>
+                                    <div className={"col-12 col-md-6 pr-3 pb-3 my-4 text-center text-lg-left " + one.clas}>
                                         <div className={"w-100 text-center "}>
-                                            <PlanetSearch class={""} image={one.imagem}></PlanetSearch>
+                                            <PlanetSearch class={"miniplanet"} image={one.imagem}></PlanetSearch>
                                         </div>
-                                        <div>
-                                            <Link to={"/master"} state={one} >
-                                            <h5 className={"amiri pb-0 mb-0"}>{one.name}</h5>
-                                            <small className={"nunito pt-0 mt-0 text-white-50"}> {one.theme}</small>
+
+                                            <Link className={"link"} to={"/master"} state={one} >
+                                            <h5 className={"amiri pb-0 mb-0 pt-3"}>{one.name}
+                                            <br/><small className={"nunito pt-0 mt-0 text-white-50"}>{one.theme}</small></h5>
                                             </Link>
-                                        </div>
+
                                     </div>
-                                    <div className={"col-6 pr-3 pb-3 " + two.clas}>
+                                    <div className={"col-12 col-md-6 pr-3 pb-3 my-4 text-center text-lg-left " + two.clas}>
                                         <div className={"w-100 text-center "}>
-                                            <PlanetSearch class={""} image={two.imagem}></PlanetSearch>
+                                            <PlanetSearch class={"miniplanet"} image={two.imagem}></PlanetSearch>
                                         </div>
-                                        <div>
-                                            <h5 className={"amiri pb-0 mb-0"}>{two.name}</h5>
-                                            <small className={"nunito pt-0 mt-0 text-white-50"}> {two.theme}</small>
-                                        </div>
+                                        <Link className={"link"} to={"/master"} state={two} >
+                                            <h5 className={"amiri pb-0 mb-0 pt-3"}>{two.name}
+                                                <br/><small className={"nunito pt-0 mt-0 text-white-50"}>{two.theme}</small></h5>
+                                        </Link>
                                     </div>
-                                    <div className={"col-6 pr-3 pb-3 " + three.clas}>
+                                    <div className={"col-12 col-md-6 pr-3 pb-3 my-4 text-center text-lg-left " + three.clas}>
                                         <div className={"w-100 text-center "}>
-                                            <PlanetSearch class={""} image={three.imagem}></PlanetSearch>
+                                            <PlanetSearch class={"miniplanet"} image={three.imagem}></PlanetSearch>
                                         </div>
-                                        <div>
-                                            <h5 className={"amiri pb-0 mb-0"}>{three.name}</h5>
-                                            <small className={"nunito pt-0 mt-0 text-white-50"}> {three.theme}</small>
-                                        </div>
+                                        <Link className={"link"} to={"/master"} state={three} >
+                                            <h5 className={"amiri pb-0 mb-0 pt-3"}>{three.name}
+                                                <br/><small className={"nunito pt-0 mt-0 text-white-50"}>{three.theme}</small></h5>
+                                        </Link>
                                     </div>
-                                    <div className={"col-6 pr-3 pb-3 " + four.clas}>
+                                    <div className={"col-12 col-md-6 pr-3 pb-3 my-4 text-center text-lg-left " + four.clas}>
                                         <div className={"w-100 text-center "}>
-                                            <PlanetSearch class={""} image={four.imagem}></PlanetSearch>
+                                            <PlanetSearch class={"miniplanet"} image={four.imagem}></PlanetSearch>
                                         </div>
-                                        <div>
-                                            <h5 className={"amiri pb-0 mb-0"}>{four.name}</h5>
-                                            <small className={"nunito pt-0 mt-0 text-white-50"}> {four.theme}</small>
-                                        </div>
+                                        <Link className={"link"} to={"/master"} state={one} >
+                                            <h5 className={"amiri pb-0 mb-0 pt-3"}>{four.name}
+                                                <br/><small className={"nunito pt-0 mt-0 text-white-50"}>{four.theme}</small></h5>
+                                        </Link>
                                     </div>
-                                    <div className={"col-6 pr-3 pb-3 " + five.clas}>
+                                    <div className={"col-12 col-md-6 pr-3 pb-3 my-4 text-center text-lg-left " + five.clas}>
                                         <div className={"w-100 text-center "}>
-                                            <PlanetSearch class={""} image={five.imagem}></PlanetSearch>
+                                            <PlanetSearch class={"miniplanet"} image={five.imagem}></PlanetSearch>
                                         </div>
-                                        <div>
-                                            <h5 className={"amiri pb-0 mb-0"}>{five.name}</h5>
-                                            <small className={"nunito pt-0 mt-0 text-white-50"}> {five.theme}</small>
-                                        </div>
+                                        <Link className={"link"} to={"/master"} state={five} >
+                                            <h5 className={"amiri pb-0 mb-0 pt-3"}>{five.name}
+                                                <br/><small className={"nunito pt-0 mt-0 text-white-50"}>{five.theme}</small></h5>
+                                        </Link>
                                     </div>
-                                    <div className={"col-6 pr-3 pb-3 " + six.clas}>
+                                    <div className={"col-12 col-md-6 pr-3 pb-3 my-4 text-center text-lg-left " + six.clas}>
                                         <div className={"w-100 text-center "}>
-                                            <PlanetSearch class={""} image={six.imagem}></PlanetSearch>
+                                            <PlanetSearch class={"miniplanet"} image={six.imagem}></PlanetSearch>
                                         </div>
-                                        <div>
-                                            <h5 className={"amiri pb-0 mb-0"}>{six.name}</h5>
-                                            <small className={"nunito pt-0 mt-0 text-white-50"}> {six.theme}</small>
-                                        </div>
+                                        <Link className={"link"} to={"/master"} state={six} >
+                                            <h5 className={"amiri pb-0 mb-0 pt-3"}>{six.name}
+                                                <br/><small className={"nunito pt-0 mt-0 text-white-50"}>{six.theme}</small></h5>
+                                        </Link>
                                     </div>
-                                    <div className={"col-6 pr-3 pb-3 " + seven.clas}>
+                                    <div className={"col-12 col-md-6 pr-3 pb-3 my-4 text-center text-lg-left " + seven.clas}>
                                         <div className={"w-100 text-center "}>
-                                            <PlanetSearch class={""} image={seven.imagem}></PlanetSearch>
+                                            <PlanetSearch class={"miniplanet"} image={seven.imagem}></PlanetSearch>
                                         </div>
-                                        <div>
-                                            <h5 className={"amiri pb-0 mb-0"}>{seven.name}</h5>
-                                            <small className={"nunito pt-0 mt-0 text-white-50"}> {seven.theme}</small>
-                                        </div>
+                                        <Link className={"link"} to={"/master"} state={seven} >
+                                            <h5 className={"amiri pb-0 mb-0 pt-3"}>{seven.name}
+                                                <br/><small className={"nunito pt-0 mt-0 text-white-50"}>{seven.theme}</small></h5>
+                                        </Link>
                                     </div>
-                                    <div className={"col-6 pr-3 pb-3 " + eight.clas}>
+                                    <div className={"col-12 col-md-6 pr-3 pb-3 my-4 text-center text-lg-left " + eight.clas}>
                                         <div className={"w-100 text-center "}>
-                                            <PlanetSearch class={""} image={eight.imagem}></PlanetSearch>
+                                            <PlanetSearch class={"miniplanet"} image={eight.imagem}></PlanetSearch>
                                         </div>
-                                        <div>
-                                            <h5 className={"amiri pb-0 mb-0"}>{eight.name}</h5>
-                                            <small className={"nunito pt-0 mt-0 text-white-50"}> {eight.theme}</small>
-                                        </div>
+                                        <Link className={"link"} to={"/master"} state={eight} >
+                                            <h5 className={"amiri pb-0 mb-0 pt-3"}>{eight.name}
+                                                <br/><small className={"nunito pt-0 mt-0 text-white-50"}>{eight.theme}</small></h5>
+                                        </Link>
                                     </div>
 
 

@@ -881,7 +881,7 @@ aside {
 
 /* Position and sizing of burger button */
 .bm-burger-button {
-  position: fixed;
+  position: absolute;
   width: 36px;
   height: 30px;
   left: 36px;
@@ -1021,9 +1021,44 @@ button#react-burger-menu-btn:focus {
   width: 40vw;
 }
 
+.miniplanet{
+  min-height: 200px;
+}
+
+@media screen and (max-width: 550px) {
+  .miniplanet{
+    min-height: 150px;
+  }
+
+}
+
+.link{
+  display: block;
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+
+}
+
+.link:hover{
+  text-decoration: none;
+   color: rgb(77, 77, 77);
+  transform: translateX(10px);
+
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+}
+
+::-webkit-scrollbar-track{
+  background-color: #0C0B0C;
+}
 
 
-
-
+::-webkit-scrollbar-thumb{
+  background-color: rgba(66, 66, 66, 0.6);
+  border-radius: 10px;
+}
 
   

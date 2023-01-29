@@ -18,6 +18,8 @@ function Master() {
 
     const [loading, setLoading] = useState(true);
     const [display, setDisplay] = useState([]);
+    const [loadingback, setLoadingback] = useState("vh-100");
+
 
 
 
@@ -46,6 +48,10 @@ function Master() {
 
         setDisplay(tra)
         console.log(planet, "é isto")
+
+        setTimeout(function() {
+            setLoadingback(" ")
+        }, 300);
     }
 
 
@@ -56,8 +62,8 @@ function Master() {
     return (
         <div>
             <Menu pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
-        <div  className={"bgblacksearch container-fluid"}>
-            <div className={"bggrainsearch pt-5 text-white"}>
+        <div  className={"bgblacksearch container-fluid " + loadingback}>
+            <div className={"bggrainsearch pt-5 text-white " + loadingback}>
                 <div className={"container-fluid masterpading"}>
                     <div className={"px-0 d-block d-lg-none "}>
                         <div className={"h-100 text-centerpt-5 w-75 mx-auto "}>
