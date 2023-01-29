@@ -1018,7 +1018,8 @@ button#react-burger-menu-btn:focus {
 }
 
 .displaypaint{
-  width: 40vw;
+  width: auto;
+  max-height: 600px;
 }
 
 .miniplanet{
