@@ -1020,6 +1020,7 @@ button#react-burger-menu-btn:focus {
 .displaypaint{
   width: auto;
   max-height: 600px;
+  max-width: 700px;
 }
 
 .miniplanet{

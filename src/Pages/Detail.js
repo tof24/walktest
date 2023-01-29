@@ -6,12 +6,28 @@ import Album from "../Components/Album";
 import {useState, useEffect} from "react";
 import {useLocation} from "react-router-dom";
 import Menu from "../Components/Menu";
+import {API_URL} from "../Components/api";
 
 function Detail() {
 
-
+    let url={ url: "https://spacewalk-c5ac73.ingress-daribow.ewp.live/wp-content/uploads/2023/01/a-song-for-every-moon.jpg"}
+    var infoplace = {
+        artist: "",
+        content: "",
+        genre: "",
+        img_cover: url,
+        length: "",
+        name: "",
+        peoma: "",
+        releasedate: "",
+        summary: "",
+        tracklength: "",
+        tracks: "",
+    };
     const location = useLocation();
-    const info = location.state.acf;
+
+
+
     const [refresh, setRefresh] = useState(0);
     const [render, setRender] = useState([]);
     const [adaptablePaint, setAdaptablePaint] = useState("");
@@ -19,22 +35,52 @@ function Detail() {
     const [Poem, setPoem] = useState("d-none");
     const [Painting, setPainting] = useState("d-none");
     const [poema, setPoema] = useState([]);
+    const [info, setInfo] = useState(infoplace);
 
-
+    console.log("location", location)
 
     console.log(info)
+
     useEffect(() => {
-        processesinfo();
+
+        if (location.state.acf!==undefined){
+            fromMaster();
+        }else {
+            fromHome()
+        }
+
+
     }, [])
 
-    const processesinfo = () => {
-        const tracksraw = info.tracks;
+    function fromMaster(){
+        console.log("im in1")
+        setInfo(location.state.acf)
+        processesinfo(location.state.acf);
+    }
+
+    const fromHome= async ()=>{
+        console.log("im in Home!")
+
+        await fetch(API_URL + location.state[0] + "?slug=" +location.state[1] )
+            .then(response => response.json())
+            .then(result => {
+                console.log("sou o result", result[0].acf)
+                processesinfo(result[0].acf);
+                setInfo(result[0].acf);
+            });
+
+    }
+
+
+
+    const processesinfo = (infoo) => {
+        const tracksraw = infoo.tracks;
         const tracks = tracksraw.split('||');
-        const lengthraw = info.tracklength;
+        const lengthraw = infoo.tracklength;
         const length = lengthraw.split('||');
 
-        if (info.content==="Poem") {
-            const poemi = info.poema;
+        if (infoo.content==="Poem") {
+            const poemi = infoo.poema;
             const newpeoma = poemi.split("<br />");
             console.log("qweqweqweweqweq", newpeoma)
             const last = ArrayToParagraphs(newpeoma);
@@ -43,11 +89,11 @@ function Detail() {
 
         maketracks(tracks, length);
 
-        if (info.content==="Painting"){
+        if (infoo.content==="Painting"){
             setAdaptablePaint("d-none");
             setPainting("d-block")
         }
-        if (info.content==="Poem"){
+        if (infoo.content==="Poem"){
             setAdaptablePaint("d-none");
             setAdaptablePoem("d-none");
             setPoem("d-block")

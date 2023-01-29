@@ -12,7 +12,7 @@ function Earth() {
     return (
         <div className={"container-fluid centra"}>
             <div className={" container-fluid w-100"}>
-                <Link to="detail"><Album name={"Dark Side of The Moon"} artist={"Pink Floyd"} class={"dark"} cover={"./Earth/dark.jpg"}></Album></Link>
+                <Link to="detail" state={["Earth","dark-side-of-the-moon"]}><Album name={"Dark Side of The Moon"} artist={"Pink Floyd"} class={"dark"} cover={"./Earth/dark.jpg"}></Album></Link>
                 <Album name={"Space Oddity"} artist={"David Bowie"} class={"oddity"} cover={"./Earth/oddity.jpg"}></Album>
                 <Painting name={"Scuola di Atene"} artist={"Rafael Sanzio"} class={"scuola"} cover={"./Earth/Scuola.jpg"}></Painting>
                 <div className={"poema text-right albumtext"}>
