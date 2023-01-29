@@ -10,7 +10,7 @@ import {API_URL} from "../Components/api";
 
 function Detail() {
 
-    let url={ url: "https://spacewalk-c5ac73.ingress-daribow.ewp.live/wp-content/uploads/2023/01/a-song-for-every-moon.jpg"}
+    let url={ url: "https://spacewalk-c5ac73.ingress-daribow.ewp.live/wp-content/uploads/2023/01/placeholder.png"}
     var infoplace = {
         artist: "",
         content: "",
