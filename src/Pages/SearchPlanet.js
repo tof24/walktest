@@ -142,15 +142,17 @@ console.log(one, two, three,refresh, "olha os numberos")
             <Menu pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
         <div  className={"bgblacksearch container-fluid"}>
             <div className={"bggrainsearch pt-5 text-white"}>
-                <div className={"titlefont amiri searchpadding"}>Are you looking for something?</div>
+                <div className={"d-none d-md-block h1 amiri searchpadding"}>Are you looking for something?</div>
+                <div className={"d-none d-sm-block d-md-none h3 amiri searchpadding"}>Are you looking for something?</div>
+                <div className={"d-block d-sm-none h4 mt-4 amiri searchpadding"}>Are you looking for something?</div>
                 <div className={"container-fluid"}>
                     <div className={"d-lg-none"}>
                         <div className={"row pt-5"}>
-                            <div className={"col-6"}>
+                            <div className={"col-12 col-sm-6 text-center"}>
                                 <span className={"amiri text-white-50"}>Order by:</span><Dropdown onSelect={sortit}></Dropdown>
                             </div>
 
-                            <div className={"col-6"}>
+                            <div className={"col-12 col-sm-6 text-center"}>
                                 <span className={"amiri text-white-50"}>Category:</span><Dropdown2 onSelect={sortit2}></Dropdown2>
                             </div>
                         </div>

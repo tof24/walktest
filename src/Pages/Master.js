@@ -70,8 +70,8 @@ function Master() {
 
 
                             <div className={"w-100"}>
-                                <div className={"titlefont amiri ml-lg-5 pl-5 h3"}>{info.name}</div>
-                                <div className={"titlefont amiri ml-lg-5 pl-5 h4 text-white-50"}>{info.theme}</div>
+                                <div className={"titlefont amiri ml-lg-4 pl-5 h3"}>{info.name}</div>
+                                <div className={"titlefont amiri ml-lg-4 pl-5 h4 text-white-50"}>{info.theme}</div>
                             </div>
 
 
