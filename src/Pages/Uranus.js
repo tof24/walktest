@@ -16,7 +16,7 @@ function Uranus() {
                 <Painting name={"Nighthawks"} artist={"Edward Hopper"} class={"dark mb-5"} cover={"./Uranus/nightwalks.jpg"}></Painting>
                 <div className={"oddity livro1 text-right albumtext"}>
                     <Text text={"Não tenho ambições nem desejos. || Ser poeta não é uma ambição minha. || É a minha maneira de estar sozinho."}
-                          source={"Livro do Desassossego, Fernando Pessoa"}></Text>
+                          source={"Eu Nunca Guardei Rebanhos, Alberto Caeiro"}></Text>
                 </div>
                 <div className={"text-right"}>
                     <h1 className={"text-white who we amiri"}> We may be alone in <br/> this darkness.</h1>
