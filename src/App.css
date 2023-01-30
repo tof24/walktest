@@ -1065,4 +1065,23 @@ button#react-burger-menu-btn:focus {
   border-radius: 10px;
 }
 
+.searchbar{
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 1px #e1e1e1 !important;
+padding-bottom: 3px;
+
+}
+
+.butoni{
+  background-color: transparent;
+  border: none;
+
+}
+
+.icon{
+  max-width: 15px;
+  height: auto;
+}
+
   

@@ -25,6 +25,10 @@ function SearchPlanet() {
     const [seven, setSeven] = useState(info[6]);
     const [eight, setEight] = useState(info[7]);
     const [refresh, setRefresh] = useState(0);
+    const [searchTerm, setSearchTerm] = useState("");
+
+    const infocheck=info;
+
 
     const sortit = (value) => {
         serOrder(value)
@@ -33,7 +37,57 @@ function SearchPlanet() {
         setCategory(value)
     }
 
+    const search = (guess) =>{
+
+        for (let i = 0; i< 8; i++){
+
+            console.log("BINGAS",searchTerm)
+            console.log("why not",infocheck[i].name)
+            console.log("brooo",searchTerm === infocheck[i].name)
+
+            if (searchTerm.toString() === infocheck[i].name.toString()){
+                console.log("BINGOOOO", infocheck[i].name )
+
+                        for (let j=0; j<8; j++){
+
+                            if (infocheck[i].name!==infocheck[j].name){
+                                info[j].clas="d-none";
+                            }else {info[j].clas="d-block"; }
+
+
+                    }
+            }
+
+        }
+        setOne( info[0]);
+        setTwo( info[1]);
+        setThree( info[2]);
+        setFour( info[3]);
+        setFive( info[4]);
+        setSix( info[5]);
+        setSeven( info[6]);
+        setEight( info[7]);
+        setRefresh(101);
+
+
+        setTimeout(() => {
+            setOne( info[0]);
+            setTwo( info[1]);
+            setThree( info[2]);
+            setFour( info[3]);
+            setFive( info[4]);
+            setSix( info[5]);
+            setSeven( info[6]);
+            setEight( info[7]);
+            setRefresh(100);
+
+        }, 900);
+
+    }
+
     useEffect(() => {
+
+
         if (order === "story"){
             info.sort(function(a, b) {
                 return parseFloat(a.position) - parseFloat(b.position);
@@ -147,6 +201,16 @@ console.log(one, two, three,refresh, "olha os numberos")
                 <div className={"d-block d-sm-none h4 mt-4 amiri searchpadding"}>Are you looking for something?</div>
                 <div className={"container-fluid"}>
                     <div className={"d-lg-none"}>
+                        <div className={"col-6 col-sm-4 pt-5"}>
+                            <input
+                                className={"w-75 searchbar text-white"}
+                                type="text"
+                                placeholder="Search"
+                                value={searchTerm}
+                                onChange={e => setSearchTerm(e.target.value)}
+                            />
+                            <button className={"butoni"}  onClick={search}> <img className={"icon"} src={"searchicon.png"}/></button>
+                        </div>
                         <div className={"row pt-5"}>
                             <div className={"col-12 col-sm-6 text-center"}>
                                 <span className={"amiri text-white-50"}>Order by:</span><Dropdown onSelect={sortit}></Dropdown>
@@ -156,6 +220,7 @@ console.log(one, two, three,refresh, "olha os numberos")
                                 <span className={"amiri text-white-50"}>Category:</span><Dropdown2 onSelect={sortit2}></Dropdown2>
                             </div>
                         </div>
+
                     </div>
                     <div className={"row"}>
                         <aside className={"d-none d-lg-block"}>
@@ -166,6 +231,17 @@ console.log(one, two, three,refresh, "olha os numberos")
 
                                 <div>
                                     <span className={"amiri text-white-50"}>Category:</span><Dropdown2 onSelect={sortit2}></Dropdown2>
+                                </div>
+
+                                <div>
+                                    <input
+                                        className={"w-75 searchbar text-white"}
+                                        type="text"
+                                        placeholder="Search"
+                                        value={searchTerm}
+                                        onChange={e => setSearchTerm(e.target.value)}
+                                    />
+                                    <button className={"butoni"}  onClick={search}> <img className={"icon"} src={"searchicon.png"}/></button>
                                 </div>
                             </div>
                         </aside>
